@@ -1,0 +1,47 @@
+{{> navbar}}
+<style type="text/css">
+  body {
+    background-color: #343a40;
+    color: #eee;
+  }
+</style>
+<div class="container-fluid">
+  <div class="navbar bg-dark">
+    <div class="nav-item dropdown">
+      <button class="btn btn-secondary dropdown-toggle new-button" type="button" id="newMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">new</button>
+      <div class="dropdown-menu" aria-labelledby="newMenuButton">
+        <a class="dropdown-item" href="#" onclick="newFolder();">Folder</a>
+        <a class="dropdown-item" href="#" onclick="uploadFile();">Upload File</a>
+        <a class="dropdown-item" href="#" onclick="uploadFolder();">Upload Folder</a>
+        <a class="dropdown-item" href="#" onclick="startExplorer();">Schema</a>
+      </div>
+    </div>
+    <ol class="pathname breadcrumb bg-dark mr-auto">
+      <li class="breadcrumb-item"><a href="#">root</a></li>
+    </ol>
+  </div>
+  <table class="table table-dark table-bordered">
+    <thead>
+      <tr>
+        <th scope="col" style="width: 32px;">Type</th>
+        <th scope="col" style="width: auto;">Name</th>
+        <th scope="col" style="width: auto;">Size</th>
+        <th scope="col" style="width: auto;">Time</th>
+        <th scope="col" style="width: 32px;"><i class="fas fa-2x fa-download"></i></th>
+        <th scope="col" style="width: 32px;"><i class="fas fa-2x fa-trash-alt"></i></th>
+      </tr>
+    </thead>
+    <tbody class="explorer">
+    </tbody>
+  </table>
+</div>
+
+<div style="display:none;">
+  <form class="upload-file" method="POST" enctype="multipart/form-data">
+    <input name="file" class="file" type="file" />
+    <input name="path" class="path" type="text" />
+  </form>
+  <a class="download" href download></a>
+</div>
+<script src="/js/cloud.js"></script>

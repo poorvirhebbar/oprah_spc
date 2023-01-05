@@ -1,0 +1,61 @@
+@keyframes hue-rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.nav-logo {
+  animation: hue-rotate 1s infinite linear;
+  animation-play-state: running;
+}
+
+.nav-logo-freeze {
+  animation: none;
+  transition: filter 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  filter: grayscale(1) !important;
+}
+
+.nav-container {
+  background-color: #eee;
+}
+
+.pathname {
+  margin: 0;
+}
+
+.breadcrumb-item {
+  padding: 7px 0;
+}
+
+.swal2-popup-big {
+  width: 100%;
+  height: 100%;
+}
+
+.viewer {
+  border: 0;
+  background-color: white;
+  width: 1536px;
+  height: 768px;
+}
+
+@media screen and (max-width: 600px) {
+  .viewer {
+    width: 300px;
+    height: 450px;
+  }
+}

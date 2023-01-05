@@ -1,0 +1,5 @@
+# Cyka Blyat Woboty, Idi Nakhuy!
+User-Agent: *
+Disallow: /cloud/
+Disallow: /api/
+Disallow: /user/
